@@ -216,6 +216,7 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
 
+  'tpope/vim-fugitive',
 
   --   { -- Highlight, edit, and navigate code
   --   'nvim-treesitter/nvim-treesitter',
@@ -333,6 +334,7 @@ require('lazy').setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("nvim-tree").setup({
+        git = { ignore = false }, -- show gitignored files
         filters = { dotfiles = false },
         view = { width = 30 },
       })
